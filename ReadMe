@@ -1,0 +1,20 @@
+This is for the meouzer.gethub.io repository
+
+Did you know that robust deep copying depends on typing. We have the following, but first our data 
+can be infinitely complex. You can have Sets whose members are Maps whose keys are ArrayBuffers and 
+values are typed arrays. The set can also have properties that are DataViews whose properties are 
+Maps whose properties are Sets whose properties are ArrayBuffers.
+
+(1) The typing system you wish JavaScript had.
+	
+(2a) The stringify() function that dumps objects for debugging and more.
+	
+(2b) The parseDataString() that creates data objects from strings.
+	
+(2c) stringify() serializes and parseDataString() deserializes so that parseDataString(stringify(x)) 
+	 is a deep copy of x. Infinitely complex data can be deep copied (circular references
+     supported).
+	
+(3)  The deepCopyData() function also deep copies data and can handle circular references 
+	
+(4) deepCopySystem can be used to deep copy classes, i.e., class instances of programmer defined classes.
